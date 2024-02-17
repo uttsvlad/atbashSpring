@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Encrypt</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/encrypt}" th:object="${atbash}">
+    <label for="message">Введите текст: </label>
+    <input type="text" th:field="*{message}" id="message"/>
+    <br/>
+    <input type="submit" value="Зашифровать"/>
+</form>
+
+</body>
+</html>
